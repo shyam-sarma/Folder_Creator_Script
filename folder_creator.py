@@ -2,7 +2,7 @@ import openpyxl
 import os
 
 # Load the Excel workbook
-workbook = openpyxl.load_workbook("/Users/shyam/Desktop/shopify/folders.xlsx")
+workbook = openpyxl.load_workbook('your_excel_file.xlsx')
 
 # Select the active sheet
 sheet = workbook.active
@@ -11,7 +11,7 @@ sheet = workbook.active
 folder_names = [cell.value for cell in sheet['A'] if cell.value is not None]
 
 # Specify the base directory where folders will be created
-base_dir = '/Users/shyam/Desktop/shopify/Photos/Black_Metal'  # Change this to your desired location
+base_dir = '/Users/yourusername/Desktop/new_folders'  # Change this to your desired location
 
 # Create the base directory if it doesn't exist
 os.makedirs(base_dir, exist_ok=True)
